@@ -23,5 +23,8 @@ $(OBJECTS): $(OBJDIR)/%.o : $(SRCDIR)/%.c
 $(PROG): $(OBJECTS)
 	$(CXX) $(OBJECTS) $(LFLAGS) -o $(PROG)
 
+run: $(PROG)
+	./$(PROG)
+
 clean:
 	rm $(PROG) $(OBJDIR)/*.o
